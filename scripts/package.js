@@ -26,6 +26,8 @@ const includePatterns = [
     'templates/**/*',
     'vendor/**/*',
     'mpesa-payment-gateway.php',
+    'uninstall.php',
+    'readme.txt',
     'composer.json',
     'LICENSE',
     'README.md',
