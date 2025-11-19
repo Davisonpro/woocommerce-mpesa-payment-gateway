@@ -352,8 +352,8 @@ final class MpesaGateway extends WC_Payment_Gateway
     {
         // Nonce is verified by WooCommerce checkout process
         // phpcs:ignore WordPress.Security.NonceVerification.Missing
-        $phone = isset($_POST['billing_mpesa_phone']) 
-            ? sanitize_text_field(wp_unslash($_POST['billing_mpesa_phone'])) 
+        $phone = isset($_POST['billing_mpesa_phone']) // phpcs:ignore WordPress.Security.NonceVerification.Missing
+            ? sanitize_text_field(wp_unslash($_POST['billing_mpesa_phone'])) // phpcs:ignore WordPress.Security.NonceVerification.Missing
             : '';
 
         if (empty($phone)) {
