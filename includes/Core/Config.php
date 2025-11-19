@@ -130,7 +130,7 @@ final class Config
      */
     public static function getResultCodeDescription(int $code): string
     {
-        return self::RESULT_CODES[$code] ?? __('Unknown Error', 'mpesa-payment-gateway');
+        return self::RESULT_CODES[$code] ?? __('Unknown Error', 'mpesa-payment-gateway-for-woocommerce');
     }
 
     /**

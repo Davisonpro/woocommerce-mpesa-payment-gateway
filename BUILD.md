@@ -35,7 +35,7 @@ This will:
 ### 3. Output
 
 The build process creates:
-- `dist/mpesa-payment-gateway-2.0.0.zip` - Distributable plugin package
+- `dist/mpesa-payment-gateway-for-woocommerce-2.0.0.zip` - Distributable plugin package
 
 ## What's Included in the Package
 
@@ -100,13 +100,13 @@ After building:
 
 ```bash
 # 1. Extract the zip
-unzip dist/mpesa-payment-gateway-2.0.0.zip -d test-install/
+unzip dist/mpesa-payment-gateway-for-woocommerce-2.0.0.zip -d test-install/
 
 # 2. Check the contents
-ls -la test-install/mpesa-payment-gateway/
+ls -la test-install/mpesa-payment-gateway-for-woocommerce/
 
 # 3. Verify file sizes
-du -sh test-install/mpesa-payment-gateway/
+du -sh test-install/mpesa-payment-gateway-for-woocommerce/
 ```
 
 ## Troubleshooting

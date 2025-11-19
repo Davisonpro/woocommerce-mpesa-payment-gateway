@@ -69,7 +69,7 @@ final class CurrencyConverter
                 'invalid_rate',
                 sprintf(
                     /* translators: %s: Currency code */
-                    __('Invalid exchange rate for %s to KES', 'mpesa-payment-gateway'),
+                    __('Invalid exchange rate for %s to KES', 'mpesa-payment-gateway-for-woocommerce'),
                     $fromCurrency
                 )
             );
@@ -125,7 +125,7 @@ final class CurrencyConverter
             'no_exchange_rate',
             sprintf(
                 /* translators: %s: Currency code */
-                __('No exchange rate found for %s to KES. Please configure exchange rates in M-Pesa settings.', 'mpesa-payment-gateway'),
+                __('No exchange rate found for %s to KES. Please configure exchange rates in M-Pesa settings.', 'mpesa-payment-gateway-for-woocommerce'),
                 $fromCurrency
             )
         );
@@ -208,7 +208,7 @@ final class CurrencyConverter
         if (!isset($body['rates']['KES'])) {
             return new WP_Error(
                 'api_error',
-                __('Failed to fetch exchange rate from API', 'mpesa-payment-gateway')
+                __('Failed to fetch exchange rate from API', 'mpesa-payment-gateway-for-woocommerce')
             );
         }
 
@@ -287,7 +287,7 @@ final class CurrencyConverter
         if ($amount <= 0) {
             return new \WP_Error(
                 'invalid_amount',
-                __('Invalid amount for currency conversion', 'mpesa-payment-gateway')
+                __('Invalid amount for currency conversion', 'mpesa-payment-gateway-for-woocommerce')
             );
         }
 

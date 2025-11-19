@@ -200,11 +200,11 @@ final class ServiceContainer
             '<div class="notice notice-success is-dismissible"><p>%s</p></div>',
             sprintf(
                 /* translators: %s: Plugin documentation link */
-                esc_html__('Thank you for installing M-Pesa Payment Gateway! %s', 'mpesa-payment-gateway'),
+                esc_html__('Thank you for installing M-Pesa Payment Gateway! %s', 'mpesa-payment-gateway-for-woocommerce'),
                 sprintf(
                     '<a href="%s">%s</a>',
                     esc_url(admin_url('admin.php?page=wc-settings&tab=checkout&section=mpesa')),
-                    esc_html__('Configure settings', 'mpesa-payment-gateway')
+                    esc_html__('Configure settings', 'mpesa-payment-gateway-for-woocommerce')
                 )
             )
         );

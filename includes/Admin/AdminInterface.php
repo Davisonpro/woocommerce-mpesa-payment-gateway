@@ -37,8 +37,8 @@ final class AdminInterface
     {
         add_submenu_page(
             'woocommerce',
-            __('M-Pesa Transactions', 'mpesa-payment-gateway'),
-            __('M-Pesa', 'mpesa-payment-gateway'),
+            __('M-Pesa Transactions', 'mpesa-payment-gateway-for-woocommerce'),
+            __('M-Pesa', 'mpesa-payment-gateway-for-woocommerce'),
             'manage_woocommerce',
             'mpesa-payment-gateway-transactions',
             [$this, 'renderTransactionsPage']
@@ -100,24 +100,24 @@ final class AdminInterface
 
         ?>
         <div class="order_data_column">
-            <h3><?php esc_html_e('M-Pesa Payment Details', 'mpesa-payment-gateway'); ?></h3>
+            <h3><?php esc_html_e('M-Pesa Payment Details', 'mpesa-payment-gateway-for-woocommerce'); ?></h3>
             <?php if ($merchantRequestId): ?>
-                <p><strong><?php esc_html_e('Merchant Request ID:', 'mpesa-payment-gateway'); ?></strong><br>
+                <p><strong><?php esc_html_e('Merchant Request ID:', 'mpesa-payment-gateway-for-woocommerce'); ?></strong><br>
                 <code><?php echo esc_html($merchantRequestId); ?></code></p>
             <?php endif; ?>
             
             <?php if ($checkoutRequestId): ?>
-                <p><strong><?php esc_html_e('Checkout Request ID:', 'mpesa-payment-gateway'); ?></strong><br>
+                <p><strong><?php esc_html_e('Checkout Request ID:', 'mpesa-payment-gateway-for-woocommerce'); ?></strong><br>
                 <code><?php echo esc_html($checkoutRequestId); ?></code></p>
             <?php endif; ?>
             
             <?php if ($phone): ?>
-                <p><strong><?php esc_html_e('Phone Number:', 'mpesa-payment-gateway'); ?></strong><br>
+                <p><strong><?php esc_html_e('Phone Number:', 'mpesa-payment-gateway-for-woocommerce'); ?></strong><br>
                 <?php echo esc_html($phone); ?></p>
             <?php endif; ?>
             
             <?php if ($order->get_transaction_id()): ?>
-                <p><strong><?php esc_html_e('Transaction ID:', 'mpesa-payment-gateway'); ?></strong><br>
+                <p><strong><?php esc_html_e('Transaction ID:', 'mpesa-payment-gateway-for-woocommerce'); ?></strong><br>
                 <code><?php echo esc_html($order->get_transaction_id()); ?></code></p>
             <?php endif; ?>
         </div>
@@ -133,18 +133,18 @@ final class AdminInterface
     {
         ?>
         <div class="wrap">
-            <h1><?php esc_html_e('M-Pesa Transactions', 'mpesa-payment-gateway'); ?></h1>
-            <p><?php esc_html_e('View and manage M-Pesa transactions.', 'mpesa-payment-gateway'); ?></p>
+            <h1><?php esc_html_e('M-Pesa Transactions', 'mpesa-payment-gateway-for-woocommerce'); ?></h1>
+            <p><?php esc_html_e('View and manage M-Pesa transactions.', 'mpesa-payment-gateway-for-woocommerce'); ?></p>
             
             <table class="wp-list-table widefat fixed striped">
                 <thead>
                     <tr>
-                        <th><?php esc_html_e('Order ID', 'mpesa-payment-gateway'); ?></th>
-                        <th><?php esc_html_e('Transaction ID', 'mpesa-payment-gateway'); ?></th>
-                        <th><?php esc_html_e('Phone', 'mpesa-payment-gateway'); ?></th>
-                        <th><?php esc_html_e('Amount', 'mpesa-payment-gateway'); ?></th>
-                        <th><?php esc_html_e('Status', 'mpesa-payment-gateway'); ?></th>
-                        <th><?php esc_html_e('Date', 'mpesa-payment-gateway'); ?></th>
+                        <th><?php esc_html_e('Order ID', 'mpesa-payment-gateway-for-woocommerce'); ?></th>
+                        <th><?php esc_html_e('Transaction ID', 'mpesa-payment-gateway-for-woocommerce'); ?></th>
+                        <th><?php esc_html_e('Phone', 'mpesa-payment-gateway-for-woocommerce'); ?></th>
+                        <th><?php esc_html_e('Amount', 'mpesa-payment-gateway-for-woocommerce'); ?></th>
+                        <th><?php esc_html_e('Status', 'mpesa-payment-gateway-for-woocommerce'); ?></th>
+                        <th><?php esc_html_e('Date', 'mpesa-payment-gateway-for-woocommerce'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -157,7 +157,7 @@ final class AdminInterface
                     ]);
 
                     if (empty($orders)) {
-                        echo '<tr><td colspan="6">' . esc_html__('No transactions found.', 'mpesa-payment-gateway') . '</td></tr>';
+                        echo '<tr><td colspan="6">' . esc_html__('No transactions found.', 'mpesa-payment-gateway-for-woocommerce') . '</td></tr>';
                     } else {
                         foreach ($orders as $order) {
                             $phone = $order->get_meta('_mpesa_phone');

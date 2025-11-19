@@ -10,7 +10,7 @@
  * Author URI: https://davisonpro.dev
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: mpesa-payment-gateway
+ * Text Domain: mpesa-payment-gateway-for-woocommerce
  * Domain Path: /languages
  * WC requires at least: 5.3
  * WC tested up to: 9.4

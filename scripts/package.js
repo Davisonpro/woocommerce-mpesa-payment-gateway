@@ -13,7 +13,7 @@ const path = require('path');
 const archiver = require('archiver');
 
 // Configuration
-const pluginSlug = 'mpesa-payment-gateway';
+const pluginSlug = 'mpesa-payment-gateway-for-woocommerce';
 const version = '2.0.0';
 const outputDir = path.resolve(__dirname, '../dist');
 const outputFile = `${pluginSlug}-${version}.zip`;
