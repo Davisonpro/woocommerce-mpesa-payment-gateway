@@ -78,7 +78,7 @@ final class HookManager
             '<a href="' . esc_url(admin_url('admin.php?page=wc-settings&tab=checkout&section=mpesa')) . '">' .
                 esc_html__('Settings', 'mpesa-payment-gateway') .
             '</a>',
-            '<a href="' . esc_url('https://github.com/Davisonpro/woo-mpesa') . '" target="_blank">' .
+            '<a href="' . esc_url('https://github.com/Davisonpro/mpesa-payment-gateway') . '" target="_blank">' .
                 esc_html__('Documentation', 'mpesa-payment-gateway') .
             '</a>',
         ];
@@ -98,14 +98,14 @@ final class HookManager
         }
 
         wp_enqueue_style(
-            'woo-mpesa-checkout',
+            'mpesa-payment-gateway-checkout',
             WOO_MPESA_URL . 'assets/css/checkout.css',
             [],
             WOO_MPESA_VERSION
         );
 
         wp_enqueue_script(
-            'woo-mpesa-checkout',
+            'mpesa-payment-gateway-checkout',
             WOO_MPESA_URL . 'assets/js/checkout.js',
             ['jquery'],
             WOO_MPESA_VERSION,
@@ -124,7 +124,7 @@ final class HookManager
 
         if ($screen && strpos($screen->id, 'wc-settings') !== false) {
             wp_enqueue_style(
-                'woo-mpesa-admin',
+                'mpesa-payment-gateway-admin',
                 WOO_MPESA_URL . 'assets/css/admin.css',
                 [],
                 WOO_MPESA_VERSION

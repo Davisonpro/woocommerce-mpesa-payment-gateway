@@ -70,13 +70,13 @@ const PhoneInput = ({ value, onChange, onBlur, hasError }) => {
     return createElement(
         'div',
         { 
-            className: 'wc-block-components-text-input woo-mpesa-phone-input',
+            className: 'wc-block-components-text-input mpesa-payment-gateway-phone-input',
             style: { marginTop: '1rem' }
         },
         createElement(
             'label',
             { 
-                htmlFor: 'woo-mpesa-phone',
+                htmlFor: 'mpesa-payment-gateway-phone',
                 className: 'wc-block-components-text-input__label',
                 style: {
                     display: 'block',
@@ -89,13 +89,13 @@ const PhoneInput = ({ value, onChange, onBlur, hasError }) => {
                     left: 'auto'
                 }
             },
-            settings.phoneLabel || __('M-Pesa Phone Number', 'woo-mpesa')
+            settings.phoneLabel || __('M-Pesa Phone Number', 'mpesa-payment-gateway')
         ),
         createElement(
             'input',
             {
                 type: 'tel',
-                id: 'woo-mpesa-phone',
+                id: 'mpesa-payment-gateway-phone',
                 className: inputClass,
                 value: value,
                 onChange: handleInput,
@@ -147,7 +147,7 @@ const ConversionNotice = () => {
                     borderRadius: '4px'
                 }
             },
-            createElement('strong', null, __('Currency Conversion Required', 'woo-mpesa') + ': '),
+            createElement('strong', null, __('Currency Conversion Required', 'mpesa-payment-gateway') + ': '),
             conversionInfo.message
         );
     }
@@ -170,7 +170,7 @@ const ConversionNotice = () => {
     });
 
     const message = sprintf(
-        __('Your order total of %1$s will be charged as KES %2$s (Rate: 1 %3$s = %4$s KES)', 'woo-mpesa'),
+        __('Your order total of %1$s will be charged as KES %2$s (Rate: 1 %3$s = %4$s KES)', 'mpesa-payment-gateway'),
         '<strong>' + formattedOriginalAmount + '</strong>',
         '<strong>' + formattedKesAmount + '</strong>',
         conversionInfo.currency,
@@ -215,14 +215,14 @@ const Content = (props) => {
             if (!phoneNumber) {
                 return {
                     type: emitResponse.responseTypes.ERROR,
-                    message: settings.phoneRequired || __('M-Pesa phone number is required.', 'woo-mpesa'),
+                    message: settings.phoneRequired || __('M-Pesa phone number is required.', 'mpesa-payment-gateway'),
                 };
             }
 
             if (!validatePhoneNumber(phoneNumber)) {
                 return {
                     type: emitResponse.responseTypes.ERROR,
-                    message: settings.phoneInvalid || __('Please enter a valid M-Pesa phone number.', 'woo-mpesa'),
+                    message: settings.phoneInvalid || __('Please enter a valid M-Pesa phone number.', 'mpesa-payment-gateway'),
                 };
             }
 
@@ -265,7 +265,7 @@ const Content = (props) => {
 
     return createElement(
         'div',
-        { className: 'woo-mpesa-payment-content' },
+        { className: 'mpesa-payment-gateway-payment-content' },
         settings.description && createElement(
             'p',
             {
@@ -295,12 +295,12 @@ const Content = (props) => {
  */
 const Label = (props) => {
     const { PaymentMethodLabel } = props.components;
-    const label = decodeEntities(settings.title) || __('Lipa Na M-Pesa', 'woo-mpesa');
+    const label = decodeEntities(settings.title) || __('Lipa Na M-Pesa', 'mpesa-payment-gateway');
 
     return createElement(
         'span',
         { 
-            className: 'woo-mpesa-label', 
+            className: 'mpesa-payment-gateway-label', 
             style: { 
                 display: 'flex', 
                 alignItems: 'center', 
@@ -327,7 +327,7 @@ const MpesaPaymentMethod = {
     content: createElement(Content),
     edit: createElement(Content),
     canMakePayment: () => true,
-    ariaLabel: decodeEntities(settings.title) || __('Lipa Na M-Pesa', 'woo-mpesa'),
+    ariaLabel: decodeEntities(settings.title) || __('Lipa Na M-Pesa', 'mpesa-payment-gateway'),
     supports: {
         features: settings.supports || ['products'],
     },

@@ -72,7 +72,7 @@
     <rule ref="WordPress.WP.I18n">
         <properties>
             <property name="text_domain" type="array">
-                <element value="woo-mpesa"/>
+                <element value="mpesa-payment-gateway"/>
             </property>
         </properties>
     </rule>

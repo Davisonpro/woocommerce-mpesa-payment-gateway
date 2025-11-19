@@ -7,7 +7,7 @@ Thank you for your interest in contributing to this M-Pesa Payment Gateway! 🎉
 1. **Fork the repository**
    ```bash
    git clone https://github.com/Davisonpro/mpesa-payment-gateway.git
-   cd woo-mpesa
+   cd mpesa-payment-gateway
    ```
 
 2. **Install dependencies**

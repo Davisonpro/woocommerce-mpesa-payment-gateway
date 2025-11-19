@@ -14,7 +14,7 @@ $woo_mpesa_merchant_request_id = $order->get_meta('_mpesa_merchant_request_id');
 $woo_mpesa_phone = $order->get_meta('_mpesa_phone');
 ?>
 
-<div class="woo-mpesa-thank-you">
+<div class="mpesa-payment-gateway-thank-you">
     <h3><?php esc_html_e('M-Pesa Payment Pending', 'mpesa-payment-gateway'); ?></h3>
     
     <p><?php esc_html_e('A payment request has been sent to your phone. Please check your phone and enter your M-Pesa PIN to complete the payment.', 'mpesa-payment-gateway'); ?></p>
@@ -54,7 +54,7 @@ $woo_mpesa_phone = $order->get_meta('_mpesa_phone');
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const thankYouSection = doc.querySelector('.woo-mpesa-thank-you');
+            const thankYouSection = doc.querySelector('.mpesa-payment-gateway-thank-you');
             
             if (!thankYouSection) {
                 // Payment completed, reload page

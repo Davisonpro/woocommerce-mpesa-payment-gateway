@@ -35,14 +35,14 @@ This will:
 ### 3. Output
 
 The build process creates:
-- `dist/woo-mpesa-2.0.0.zip` - Distributable plugin package
+- `dist/mpesa-payment-gateway-2.0.0.zip` - Distributable plugin package
 
 ## What's Included in the Package
 
 The zip file contains:
 
 ```
-woo-mpesa/
+mpesa-payment-gateway/
 ├── assets/
 │   ├── css/
 │   ├── images/
@@ -58,7 +58,7 @@ woo-mpesa/
 ├── languages/
 ├── templates/
 ├── vendor/ (production only)
-├── woo-mpesa.php
+├── mpesa-payment-gateway.php
 ├── composer.json
 ├── LICENSE
 ├── README.md
@@ -82,7 +82,7 @@ If you prefer to build manually:
 
 ```bash
 # 1. Clean old builds
-rm -rf dist/ woo-mpesa.zip
+rm -rf dist/ mpesa-payment-gateway.zip
 
 # 2. Install production dependencies
 composer install --no-dev --optimize-autoloader --prefer-dist
@@ -100,13 +100,13 @@ After building:
 
 ```bash
 # 1. Extract the zip
-unzip dist/woo-mpesa-2.0.0.zip -d test-install/
+unzip dist/mpesa-payment-gateway-2.0.0.zip -d test-install/
 
 # 2. Check the contents
-ls -la test-install/woo-mpesa/
+ls -la test-install/mpesa-payment-gateway/
 
 # 3. Verify file sizes
-du -sh test-install/woo-mpesa/
+du -sh test-install/mpesa-payment-gateway/
 ```
 
 ## Troubleshooting
@@ -171,14 +171,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: woo-mpesa-release
+          name: mpesa-payment-gateway-release
           path: dist/*.zip
 ```
 
 ## Version Management
 
 Update version in:
-1. `woo-mpesa.php` (plugin header)
+1. `mpesa-payment-gateway.php` (plugin header)
 2. `package.json` (version field)
 3. `scripts/package.js` (version constant)
 4. `composer.json` (version field)

@@ -74,7 +74,7 @@ final class BlocksIntegration extends AbstractPaymentMethodType
             ];
 
         wp_register_script(
-            'woo-mpesa-blocks',
+            'mpesa-payment-gateway-blocks',
             Config::getUrl('assets/js/blocks/index.js'),
             $scriptAsset['dependencies'],
             $scriptAsset['version'],
@@ -83,13 +83,13 @@ final class BlocksIntegration extends AbstractPaymentMethodType
 
         if (function_exists('wp_set_script_translations')) {
             wp_set_script_translations(
-                'woo-mpesa-blocks',
+                'mpesa-payment-gateway-blocks',
                 'mpesa-payment-gateway',
                 Config::getPath('languages')
             );
         }
 
-        return ['woo-mpesa-blocks'];
+        return ['mpesa-payment-gateway-blocks'];
     }
 
     /**

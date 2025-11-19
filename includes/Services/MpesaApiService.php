@@ -145,7 +145,7 @@ final class MpesaApiService
 
         $callbackUrl = add_query_arg(
             ['action' => 'reconcile', 'order' => $reference],
-            home_url('/wc-api/woo-mpesa')
+            home_url('/wc-api/mpesa-payment-gateway')
         );
 
         $payload = [
@@ -318,8 +318,8 @@ final class MpesaApiService
             'Amount' => (int) ceil($amount),
             'ReceiverParty' => $this->config['shortcode'],
             'RecieverIdentifierType' => $this->config['type'],
-            'ResultURL' => home_url('/wc-api/woo-mpesa?action=reversal_result'),
-            'QueueTimeOutURL' => home_url('/wc-api/woo-mpesa?action=reversal_timeout'),
+            'ResultURL' => home_url('/wc-api/mpesa-payment-gateway?action=reversal_result'),
+            'QueueTimeOutURL' => home_url('/wc-api/mpesa-payment-gateway?action=reversal_timeout'),
             'Remarks' => $remarks ?: __('Transaction reversal', 'mpesa-payment-gateway'),
             'Occasion' => '',
         ];

@@ -96,7 +96,7 @@ final class MpesaGateway extends WC_Payment_Gateway
         
         add_action('woocommerce_thankyou_' . $this->id, [$this, 'thankYouPage'], 10, 1);
         add_action('woocommerce_email_before_order_table', [$this, 'emailInstructions'], 10, 4);
-        add_action('woocommerce_api_woo-mpesa', [$this, 'handleCallback']);
+        add_action('woocommerce_api_mpesa-payment-gateway', [$this, 'handleCallback']);
         
         // Blocks checkout support
         add_action('woocommerce_store_api_checkout_update_order_from_request', [
@@ -279,7 +279,7 @@ final class MpesaGateway extends WC_Payment_Gateway
         // Show currency conversion info if applicable
         $this->displayCurrencyConversionNotice();
 
-        echo '<div class="woo-mpesa-payment-fields">';
+        echo '<div class="mpesa-payment-gateway-payment-fields">';
         woocommerce_form_field('billing_mpesa_phone', [
             'type' => 'tel',
             'required' => true,

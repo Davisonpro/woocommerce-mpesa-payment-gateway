@@ -61,12 +61,12 @@ Built with modern PHP practices including:
 
 = Documentation =
 
-For detailed documentation, configuration guides, and developer resources, visit the [GitHub repository](https://github.com/Davisonpro/woo-mpesa).
+For detailed documentation, configuration guides, and developer resources, visit the [GitHub repository](https://github.com/Davisonpro/mpesa-payment-gateway).
 
 = Support =
 
-* [GitHub Issues](https://github.com/Davisonpro/woo-mpesa/issues)
-* [Documentation](https://github.com/Davisonpro/woo-mpesa/wiki)
+* [GitHub Issues](https://github.com/Davisonpro/mpesa-payment-gateway/issues)
+* [Documentation](https://github.com/Davisonpro/mpesa-payment-gateway/wiki)
 * Email: davis@davisonpro.dev
 
 == Installation ==
@@ -139,7 +139,7 @@ Yes, enable "Transaction Reversals" in settings. Refunds initiated from WooComme
 
 = Where can I view transaction logs? =
 
-Enable debug mode in the plugin settings, then go to **WooCommerce → Status → Logs** and select the `woo-mpesa-*` log file.
+Enable debug mode in the plugin settings, then go to **WooCommerce → Status → Logs** and select the `mpesa-payment-gateway-*` log file.
 
 = What about security? =
 
@@ -225,7 +225,7 @@ add_action('woo_mpesa_payment_complete', function($order, $paymentData) {
 
 = GitHub =
 
-Contribute or report issues: [github.com/Davisonpro/woo-mpesa](https://github.com/Davisonpro/woo-mpesa)
+Contribute or report issues: [github.com/Davisonpro/mpesa-payment-gateway](https://github.com/Davisonpro/mpesa-payment-gateway)
 
 == Privacy Policy ==
 

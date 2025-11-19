@@ -7,12 +7,12 @@
  */
 
 /* Payment fields container */
-.woo-mpesa-payment-fields {
+.mpesa-payment-gateway-payment-fields {
     margin: 1rem 0;
 }
 
 /* Phone input styling */
-.woo-mpesa-payment-fields input[type="tel"] {
+.mpesa-payment-gateway-payment-fields input[type="tel"] {
     width: 100%;
     padding: 0.75rem;
     font-size: 16px;
@@ -22,13 +22,13 @@
     transition: border-color 0.2s ease;
 }
 
-.woo-mpesa-payment-fields input[type="tel"]:focus {
+.mpesa-payment-gateway-payment-fields input[type="tel"]:focus {
     outline: none;
     border-color: #007cba;
     box-shadow: 0 0 0 1px #007cba;
 }
 
-.woo-mpesa-payment-fields input[type="tel"].woocommerce-invalid {
+.mpesa-payment-gateway-payment-fields input[type="tel"].woocommerce-invalid {
     border-color: #cc1818;
 }
 
@@ -36,7 +36,7 @@
    Blocks Checkout Styles
    ============================================ */
 
-.woo-mpesa-phone-input {
+.mpesa-payment-gateway-phone-input {
     margin-top: 1rem;
 }
 
@@ -46,9 +46,9 @@
  * Prevents WooCommerce Blocks from floating labels over inputs
  * Forces label to display above the input field with proper spacing
  */
-.woo-mpesa-phone-input label,
+.mpesa-payment-gateway-phone-input label,
 .wc-block-components-text-input label,
-.woo-mpesa-payment-content .wc-block-components-text-input label {
+.mpesa-payment-gateway-payment-content .wc-block-components-text-input label {
     display: block !important;
     margin-bottom: 0.5rem !important;
     font-size: 14px !important;
@@ -61,17 +61,17 @@
     left: auto !important;
 }
 
-.woo-mpesa-phone-input input.has-error {
+.mpesa-payment-gateway-phone-input input.has-error {
     border-color: #cc1818 !important;
 }
 
 /* Ensure proper spacing in Blocks checkout */
-.woo-mpesa-payment-content .wc-block-components-text-input {
+.mpesa-payment-gateway-payment-content .wc-block-components-text-input {
     margin-top: 1rem;
     position: relative;
 }
 
-.woo-mpesa-payment-content .wc-block-components-text-input__input {
+.mpesa-payment-gateway-payment-content .wc-block-components-text-input__input {
     width: 100% !important;
     padding: 0.75rem !important;
     font-size: 16px !important;
@@ -82,24 +82,24 @@
     transition: border-color 0.2s ease;
 }
 
-.woo-mpesa-payment-content .wc-block-components-text-input__input:focus {
+.mpesa-payment-gateway-payment-content .wc-block-components-text-input__input:focus {
     outline: none;
     border-color: #007cba !important;
     box-shadow: 0 0 0 1px #007cba;
 }
 
-.woo-mpesa-payment-content .wc-block-components-text-input__input::placeholder {
+.mpesa-payment-gateway-payment-content .wc-block-components-text-input__input::placeholder {
     color: #999;
     opacity: 1;
 }
 
 /* Error state for Blocks */
-.woo-mpesa-payment-content .wc-block-components-text-input.has-error .wc-block-components-text-input__input {
+.mpesa-payment-gateway-payment-content .wc-block-components-text-input.has-error .wc-block-components-text-input__input {
     border-color: #cc1818 !important;
 }
 
 /* Thank you page */
-.woo-mpesa-thank-you {
+.mpesa-payment-gateway-thank-you {
     background: #f8f9fa;
     border: 1px solid #e1e1e1;
     border-radius: 4px;
@@ -107,17 +107,17 @@
     margin: 1rem 0;
 }
 
-.woo-mpesa-thank-you h3 {
+.mpesa-payment-gateway-thank-you h3 {
     margin-top: 0;
     color: #00a32a;
 }
 
-.woo-mpesa-thank-you p {
+.mpesa-payment-gateway-thank-you p {
     margin: 0.5rem 0;
     line-height: 1.6;
 }
 
-.woo-mpesa-thank-you code {
+.mpesa-payment-gateway-thank-you code {
     background: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
@@ -125,35 +125,35 @@
 }
 
 /* Loading spinner */
-.woo-mpesa-loading {
+.mpesa-payment-gateway-loading {
     display: inline-block;
     width: 20px;
     height: 20px;
     border: 3px solid rgba(0,0,0,.1);
     border-radius: 50%;
     border-top-color: #007cba;
-    animation: woo-mpesa-spin 1s ease-in-out infinite;
+    animation: mpesa-payment-gateway-spin 1s ease-in-out infinite;
 }
 
-@keyframes woo-mpesa-spin {
+@keyframes mpesa-payment-gateway-spin {
     to { transform: rotate(360deg); }
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-    .woo-mpesa-payment-fields input[type="tel"],
-    .woo-mpesa-phone-input input {
+    .mpesa-payment-gateway-payment-fields input[type="tel"],
+    .mpesa-payment-gateway-phone-input input {
         font-size: 16px !important; /* Prevent zoom on iOS */
     }
     
-    .woo-mpesa-thank-you {
+    .mpesa-payment-gateway-thank-you {
         padding: 1rem;
     }
 }
 
 /* RTL Support */
-[dir="rtl"] .woo-mpesa-phone-input label,
-[dir="rtl"] .woo-mpesa-thank-you {
+[dir="rtl"] .mpesa-payment-gateway-phone-input label,
+[dir="rtl"] .mpesa-payment-gateway-thank-you {
     text-align: right;
 }
 

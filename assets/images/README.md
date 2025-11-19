@@ -86,7 +86,7 @@ Must comply with:
 ## File Permissions
 
 ```bash
-cd /Users/davisonpro/websites/maramani/wp-content/plugins/woo-mpesa/assets/images/
+cd /Users/davisonpro/websites/maramani/wp-content/plugins/mpesa-payment-gateway/assets/images/
 chmod 644 *.png *.svg
 ```
 
