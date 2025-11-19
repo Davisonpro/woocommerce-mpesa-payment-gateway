@@ -8,8 +8,6 @@
 
 M-Pesa payment gateway for WooCommerce. Accept mobile money payments directly in your WordPress store with support for STK Push, C2B payments, and automatic transaction processing.
 
-> **Note:** This plugin was previously known as "woo-mpesa" but was renamed to comply with WordPress.org guidelines (plugin slugs cannot start with "woo" due to WooCommerce trademark restrictions).
-
 **Developed by [Davison Pro](https://davisonpro.dev)**
 
 ---
