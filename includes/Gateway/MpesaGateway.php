@@ -66,8 +66,8 @@ final class MpesaGateway extends WC_Payment_Gateway
 
         $this->id = 'mpesa';
         $this->icon = Config::getUrl('assets/images/mpesa-logo.png');
-        $this->method_title = __('Lipa Na M-Pesa', 'mpesa-payment-gateway-for-woocommerce');
-        $this->method_description = __('Accept M-Pesa payments via Safaricom Daraja API', 'mpesa-payment-gateway-for-woocommerce');
+        $this->method_title = __('Lipa Na M-Pesa', 'woocommerce-mpesa-payment-gateway');
+        $this->method_description = __('Accept M-Pesa payments via Safaricom Daraja API', 'woocommerce-mpesa-payment-gateway');
         $this->has_fields = true;
         $this->supports = ['products'];
 
@@ -115,149 +115,149 @@ final class MpesaGateway extends WC_Payment_Gateway
     {
         $this->form_fields = [
             'enabled' => [
-                'title' => __('Enable/Disable', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Enable/Disable', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'checkbox',
-                'label' => __('Enable M-Pesa Payment Gateway', 'mpesa-payment-gateway-for-woocommerce'),
+                'label' => __('Enable M-Pesa Payment Gateway', 'woocommerce-mpesa-payment-gateway'),
                 'default' => 'yes',
             ],
             'title' => [
-                'title' => __('Title', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Title', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'text',
-                'description' => __('Payment method title shown to customers during checkout.', 'mpesa-payment-gateway-for-woocommerce'),
-                'default' => __('Lipa Na M-Pesa', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Payment method title shown to customers during checkout.', 'woocommerce-mpesa-payment-gateway'),
+                'default' => __('Lipa Na M-Pesa', 'woocommerce-mpesa-payment-gateway'),
                 'desc_tip' => true,
             ],
             'description' => [
-                'title' => __('Description', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Description', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'textarea',
-                'description' => __('Payment method description shown to customers during checkout.', 'mpesa-payment-gateway-for-woocommerce'),
-                'default' => __('Pay securely using your M-Pesa mobile money account.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Payment method description shown to customers during checkout.', 'woocommerce-mpesa-payment-gateway'),
+                'default' => __('Pay securely using your M-Pesa mobile money account.', 'woocommerce-mpesa-payment-gateway'),
                 'desc_tip' => true,
             ],
             'env_section' => [
-                'title' => __('Environment Settings', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Environment Settings', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'title',
-                'description' => __('Configure your M-Pesa environment settings.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Configure your M-Pesa environment settings.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'env' => [
-                'title' => __('Environment', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Environment', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'select',
                 'options' => [
-                    'sandbox' => __('Sandbox', 'mpesa-payment-gateway-for-woocommerce'),
-                    'live' => __('Live', 'mpesa-payment-gateway-for-woocommerce'),
+                    'sandbox' => __('Sandbox', 'woocommerce-mpesa-payment-gateway'),
+                    'live' => __('Live', 'woocommerce-mpesa-payment-gateway'),
                 ],
                 'default' => 'sandbox',
                 'desc_tip' => true,
-                'description' => __('Select sandbox for testing or live for production.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Select sandbox for testing or live for production.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'idtype' => [
-                'title' => __('Business Type', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Business Type', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'select',
                 'options' => [
-                    Config::TRANSACTION_TYPES['PAYBILL'] => __('Paybill', 'mpesa-payment-gateway-for-woocommerce'),
-                    Config::TRANSACTION_TYPES['TILL'] => __('Till Number', 'mpesa-payment-gateway-for-woocommerce'),
+                    Config::TRANSACTION_TYPES['PAYBILL'] => __('Paybill', 'woocommerce-mpesa-payment-gateway'),
+                    Config::TRANSACTION_TYPES['TILL'] => __('Till Number', 'woocommerce-mpesa-payment-gateway'),
                 ],
                 'default' => Config::TRANSACTION_TYPES['PAYBILL'],
                 'desc_tip' => true,
-                'description' => __('Select your M-Pesa business type.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Select your M-Pesa business type.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'api_section' => [
-                'title' => __('API Credentials', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('API Credentials', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'title',
-                'description' => __('Enter your Daraja API credentials. Get them from <a href="https://developer.safaricom.co.ke" target="_blank">Safaricom Developer Portal</a>.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Enter your Daraja API credentials. Get them from <a href="https://developer.safaricom.co.ke" target="_blank">Safaricom Developer Portal</a>.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'shortcode' => [
-                'title' => __('Business Shortcode', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Business Shortcode', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'text',
-                'description' => __('Your M-Pesa business shortcode (Paybill or Till number).', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Your M-Pesa business shortcode (Paybill or Till number).', 'woocommerce-mpesa-payment-gateway'),
                 'default' => '174379', // Sandbox default
                 'desc_tip' => true,
             ],
             'key' => [
-                'title' => __('Consumer Key', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Consumer Key', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'text',
-                'description' => __('Your Daraja API consumer key.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Your Daraja API consumer key.', 'woocommerce-mpesa-payment-gateway'),
                 'default' => '',
                 'desc_tip' => true,
             ],
             'secret' => [
-                'title' => __('Consumer Secret', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Consumer Secret', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'password',
-                'description' => __('Your Daraja API consumer secret.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Your Daraja API consumer secret.', 'woocommerce-mpesa-payment-gateway'),
                 'default' => '',
                 'desc_tip' => true,
             ],
             'passkey' => [
-                'title' => __('Passkey', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Passkey', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'text',
-                'description' => __('Your Lipa Na M-Pesa Online passkey.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Your Lipa Na M-Pesa Online passkey.', 'woocommerce-mpesa-payment-gateway'),
                 'default' => '',
                 'desc_tip' => true,
                 'css' => 'width: 100%;',
             ],
             'signature' => [
-                'title' => __('Webhook Signature', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Webhook Signature', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'password',
-                'description' => __('Webhook security signature. Keep this secret.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Webhook security signature. Keep this secret.', 'woocommerce-mpesa-payment-gateway'),
                 'default' => wp_generate_password(32, false),
                 'desc_tip' => true,
             ],
             'advanced_section' => [
-                'title' => __('Advanced Options', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Advanced Options', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'title',
             ],
             'completion_status' => [
-                'title' => __('Order Status on Payment', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Order Status on Payment', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'select',
                 'options' => [
-                    'completed' => __('Completed', 'mpesa-payment-gateway-for-woocommerce'),
-                    'processing' => __('Processing', 'mpesa-payment-gateway-for-woocommerce'),
-                    'on-hold' => __('On Hold', 'mpesa-payment-gateway-for-woocommerce'),
+                    'completed' => __('Completed', 'woocommerce-mpesa-payment-gateway'),
+                    'processing' => __('Processing', 'woocommerce-mpesa-payment-gateway'),
+                    'on-hold' => __('On Hold', 'woocommerce-mpesa-payment-gateway'),
                 ],
                 'default' => 'completed',
-                'description' => __('Order status after successful payment.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Order status after successful payment.', 'woocommerce-mpesa-payment-gateway'),
                 'desc_tip' => true,
             ],
             'enable_c2b' => [
-                'title' => __('Enable C2B', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Enable C2B', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'checkbox',
-                'label' => __('Enable manual M-Pesa payments (C2B)', 'mpesa-payment-gateway-for-woocommerce'),
+                'label' => __('Enable manual M-Pesa payments (C2B)', 'woocommerce-mpesa-payment-gateway'),
                 'default' => 'no',
-                'description' => __('Allows customers to manually send money via M-Pesa.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Allows customers to manually send money via M-Pesa.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'enable_reversal' => [
-                'title' => __('Enable Reversals', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Enable Reversals', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'checkbox',
-                'label' => __('Enable automatic transaction reversals', 'mpesa-payment-gateway-for-woocommerce'),
+                'label' => __('Enable automatic transaction reversals', 'woocommerce-mpesa-payment-gateway'),
                 'default' => 'no',
             ],
             'debug' => [
-                'title' => __('Debug Mode', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Debug Mode', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'checkbox',
-                'label' => __('Enable debug logging', 'mpesa-payment-gateway-for-woocommerce'),
+                'label' => __('Enable debug logging', 'woocommerce-mpesa-payment-gateway'),
                 'default' => 'no',
                 'description' => sprintf(
                     /* translators: %s: Log file path */
-                    __('Log M-Pesa events. Logs can be found in %s', 'mpesa-payment-gateway-for-woocommerce'),
+                    __('Log M-Pesa events. Logs can be found in %s', 'woocommerce-mpesa-payment-gateway'),
                     '<code>WooCommerce > Status > Logs</code>'
                 ),
             ],
             'currency_section' => [
-                'title' => __('Currency Conversion', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Currency Conversion', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'title',
-                'description' => __('M-Pesa only accepts payments in KES. Configure how other currencies should be converted.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('M-Pesa only accepts payments in KES. Configure how other currencies should be converted.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'auto_exchange_rates' => [
-                'title' => __('Auto Exchange Rates', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Auto Exchange Rates', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'checkbox',
-                'label' => __('Automatically fetch current exchange rates', 'mpesa-payment-gateway-for-woocommerce'),
+                'label' => __('Automatically fetch current exchange rates', 'woocommerce-mpesa-payment-gateway'),
                 'default' => 'yes',
-                'description' => __('Automatically fetch and update exchange rates every 6 hours. Recommended for accurate conversions.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Automatically fetch and update exchange rates every 6 hours. Recommended for accurate conversions.', 'woocommerce-mpesa-payment-gateway'),
             ],
             'exchange_rates' => [
-                'title' => __('Exchange Rates', 'mpesa-payment-gateway-for-woocommerce'),
+                'title' => __('Exchange Rates', 'woocommerce-mpesa-payment-gateway'),
                 'type' => 'textarea',
-                'description' => __('Enter exchange rates (one per line) in format: <strong>CURRENCY=RATE</strong><br>Example:<br><code>USD=130.50<br>EUR=140.25<br>GBP=165.80<br>TZS=0.055<br>UGX=0.035<br>ZAR=7.50</code><br>Rate = How many KES for 1 unit of currency. Used when auto rates are disabled or unavailable.', 'mpesa-payment-gateway-for-woocommerce'),
+                'description' => __('Enter exchange rates (one per line) in format: <strong>CURRENCY=RATE</strong><br>Example:<br><code>USD=130.50<br>EUR=140.25<br>GBP=165.80<br>TZS=0.055<br>UGX=0.035<br>ZAR=7.50</code><br>Rate = How many KES for 1 unit of currency. Used when auto rates are disabled or unavailable.', 'woocommerce-mpesa-payment-gateway'),
                 'default' => "USD=130\nEUR=140\nGBP=165\nTZS=0.055\nUGX=0.035",
                 'desc_tip' => false,
                 'css' => 'min-height: 120px; font-family: monospace;',
@@ -284,8 +284,8 @@ final class MpesaGateway extends WC_Payment_Gateway
         woocommerce_form_field('billing_mpesa_phone', [
             'type' => 'tel',
             'required' => true,
-            'label' => __('M-Pesa Phone Number', 'mpesa-payment-gateway-for-woocommerce'),
-            'placeholder' => __('e.g. 254712345678', 'mpesa-payment-gateway-for-woocommerce'),
+            'label' => __('M-Pesa Phone Number', 'woocommerce-mpesa-payment-gateway'),
+            'placeholder' => __('e.g. 254712345678', 'woocommerce-mpesa-payment-gateway'),
             'custom_attributes' => [
                 'pattern' => '[0-9]*',
                 'inputmode' => 'numeric',
@@ -323,18 +323,18 @@ final class MpesaGateway extends WC_Payment_Gateway
 
         if (is_wp_error($conversionInfo)) {
             echo '<div class="woocommerce-info" style="margin-bottom: 1em;">';
-            echo '<strong>' . esc_html__('Currency Conversion Required', 'mpesa-payment-gateway-for-woocommerce') . ':</strong> ';
+            echo '<strong>' . esc_html__('Currency Conversion Required', 'woocommerce-mpesa-payment-gateway') . ':</strong> ';
             echo esc_html($conversionInfo->get_error_message());
             echo '</div>';
             return;
         }
 
         echo '<div class="woocommerce-info" style="margin-bottom: 1em;">';
-        echo '<strong>' . esc_html__('Currency Conversion', 'mpesa-payment-gateway-for-woocommerce') . ':</strong> ';
+        echo '<strong>' . esc_html__('Currency Conversion', 'woocommerce-mpesa-payment-gateway') . ':</strong> ';
         echo wp_kses_post(
             sprintf(
                 /* translators: 1: Original amount with currency, 2: KES amount, 3: Currency code, 4: Exchange rate */
-                __('Your order total of %1$s will be charged as KES %2$s (Rate: 1 %3$s = %4$s KES)', 'mpesa-payment-gateway-for-woocommerce'),
+                __('Your order total of %1$s will be charged as KES %2$s (Rate: 1 %3$s = %4$s KES)', 'woocommerce-mpesa-payment-gateway'),
                 '<strong>' . wc_price($conversionInfo['amount'], ['currency' => $currency]) . '</strong>',
                 '<strong>' . number_format($conversionInfo['kes_amount'], 2, '.', ',') . '</strong>',
                 esc_html($currency),
@@ -359,7 +359,7 @@ final class MpesaGateway extends WC_Payment_Gateway
 
         if (empty($phone)) {
             wc_add_notice(
-                __('M-Pesa phone number is required.', 'mpesa-payment-gateway-for-woocommerce'),
+                __('M-Pesa phone number is required.', 'woocommerce-mpesa-payment-gateway'),
                 'error'
             );
             return false;
@@ -367,7 +367,7 @@ final class MpesaGateway extends WC_Payment_Gateway
 
         if (!Config::validatePhone($phone)) {
             wc_add_notice(
-                __('Please enter a valid M-Pesa phone number (e.g. 254712345678).', 'mpesa-payment-gateway-for-woocommerce'),
+                __('Please enter a valid M-Pesa phone number (e.g. 254712345678).', 'woocommerce-mpesa-payment-gateway'),
                 'error'
             );
             return false;
@@ -387,7 +387,7 @@ final class MpesaGateway extends WC_Payment_Gateway
         $order = wc_get_order($orderId);
 
         if (!$order) {
-            return $this->paymentError(__('Invalid order.', 'mpesa-payment-gateway-for-woocommerce'));
+            return $this->paymentError(__('Invalid order.', 'woocommerce-mpesa-payment-gateway'));
         }
 
         $phone = $this->getPhoneNumber($order);
@@ -413,7 +413,7 @@ final class MpesaGateway extends WC_Payment_Gateway
             $order->add_order_note(
                 sprintf(
                     /* translators: 1: Original amount, 2: Original currency, 3: KES amount, 4: Exchange rate */
-                    __('Currency converted: %1$s %2$s → KES %3$s (Rate: %4$s)', 'mpesa-payment-gateway-for-woocommerce'),
+                    __('Currency converted: %1$s %2$s → KES %3$s (Rate: %4$s)', 'woocommerce-mpesa-payment-gateway'),
                     number_format($conversionInfo['amount'], 2, '.', ','),
                     $conversionInfo['currency'],
                     number_format($kesAmount, 2, '.', ','),
@@ -430,7 +430,7 @@ final class MpesaGateway extends WC_Payment_Gateway
             (string) $orderId,
             sprintf(
                 /* translators: %s: Order ID */
-                __('Order #%s', 'mpesa-payment-gateway-for-woocommerce'),
+                __('Order #%s', 'woocommerce-mpesa-payment-gateway'),
                 $orderId
             )
         );
@@ -444,7 +444,7 @@ final class MpesaGateway extends WC_Payment_Gateway
             $message = sprintf(
                 '%s: %s',
                 $result['errorCode'],
-                $result['errorMessage'] ?? __('Unknown error', 'mpesa-payment-gateway-for-woocommerce')
+                $result['errorMessage'] ?? __('Unknown error', 'woocommerce-mpesa-payment-gateway')
             );
             $this->logger->logPaymentFailure($orderId, $message);
             return $this->paymentError($message);
@@ -459,7 +459,7 @@ final class MpesaGateway extends WC_Payment_Gateway
             $order->add_order_note(
                 sprintf(
                     /* translators: 1: Phone number, 2: Merchant Request ID */
-                    __('M-Pesa STK push sent to %1$s. Merchant Request ID: %2$s', 'mpesa-payment-gateway-for-woocommerce'),
+                    __('M-Pesa STK push sent to %1$s. Merchant Request ID: %2$s', 'woocommerce-mpesa-payment-gateway'),
                     $phone,
                     $result['MerchantRequestID']
                 )
@@ -473,7 +473,7 @@ final class MpesaGateway extends WC_Payment_Gateway
             ];
         }
 
-        return $this->paymentError(__('Failed to initiate payment.', 'mpesa-payment-gateway-for-woocommerce'));
+        return $this->paymentError(__('Failed to initiate payment.', 'woocommerce-mpesa-payment-gateway'));
     }
 
     /**
@@ -513,7 +513,7 @@ final class MpesaGateway extends WC_Payment_Gateway
         wc_add_notice(
             sprintf(
                 /* translators: %s: Error message */
-                __('Payment Error: %s', 'mpesa-payment-gateway-for-woocommerce'),
+                __('Payment Error: %s', 'woocommerce-mpesa-payment-gateway'),
                 $message
             ),
             'error'
@@ -540,7 +540,7 @@ final class MpesaGateway extends WC_Payment_Gateway
         }
 
         if ($order->get_status() === 'completed') {
-            echo '<p>' . esc_html__('Your payment has been received. Thank you for your purchase!', 'mpesa-payment-gateway-for-woocommerce') . '</p>';
+            echo '<p>' . esc_html__('Your payment has been received. Thank you for your purchase!', 'woocommerce-mpesa-payment-gateway') . '</p>';
             return;
         }
 
@@ -563,7 +563,7 @@ final class MpesaGateway extends WC_Payment_Gateway
         }
 
         if ($email->id === 'customer_completed_order' && $order->get_transaction_id()) {
-            echo '<p><strong>' . esc_html__('M-Pesa Transaction ID:', 'mpesa-payment-gateway-for-woocommerce') . '</strong> ' .
+            echo '<p><strong>' . esc_html__('M-Pesa Transaction ID:', 'woocommerce-mpesa-payment-gateway') . '</strong> ' .
                 esc_html($order->get_transaction_id()) . '</p>';
         }
     }

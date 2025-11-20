@@ -31,7 +31,7 @@ final class LoggerService
      *
      * @var string
      */
-    private const LOG_SOURCE = 'mpesa-payment-gateway-for-woocommerce';
+    private const LOG_SOURCE = 'woocommerce-mpesa-payment-gateway';
 
     /**
      * Constructor

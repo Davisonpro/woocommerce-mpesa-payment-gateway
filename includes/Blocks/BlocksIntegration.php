@@ -84,7 +84,7 @@ final class BlocksIntegration extends AbstractPaymentMethodType
         if (function_exists('wp_set_script_translations')) {
             wp_set_script_translations(
                 'mpesa-payment-gateway-blocks',
-                'mpesa-payment-gateway-for-woocommerce',
+                'woocommerce-mpesa-payment-gateway',
                 Config::getPath('languages')
             );
         }
@@ -104,10 +104,10 @@ final class BlocksIntegration extends AbstractPaymentMethodType
             'description' => $this->get_setting('description'),
             'supports' => $this->get_supported_features(),
             'icon' => Config::getUrl('assets/images/mpesa-logo.png'),
-            'phoneLabel' => __('M-Pesa Phone Number', 'mpesa-payment-gateway-for-woocommerce'),
-            'phonePlaceholder' => __('e.g. 254712345678', 'mpesa-payment-gateway-for-woocommerce'),
-            'phoneRequired' => __('M-Pesa phone number is required.', 'mpesa-payment-gateway-for-woocommerce'),
-            'phoneInvalid' => __('Please enter a valid M-Pesa phone number.', 'mpesa-payment-gateway-for-woocommerce'),
+            'phoneLabel' => __('M-Pesa Phone Number', 'woocommerce-mpesa-payment-gateway'),
+            'phonePlaceholder' => __('e.g. 254712345678', 'woocommerce-mpesa-payment-gateway'),
+            'phoneRequired' => __('M-Pesa phone number is required.', 'woocommerce-mpesa-payment-gateway'),
+            'phoneInvalid' => __('Please enter a valid M-Pesa phone number.', 'woocommerce-mpesa-payment-gateway'),
             'conversionInfo' => $this->getConversionInfo(),
         ];
 

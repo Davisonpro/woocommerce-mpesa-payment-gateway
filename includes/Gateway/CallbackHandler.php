@@ -127,7 +127,7 @@ final class CallbackHandler
             $order->add_order_note(
                 sprintf(
                     /* translators: 1: Transaction ID, 2: Phone number */
-                    __('M-Pesa payment received. Transaction ID: %1$s, Phone: %2$s', 'mpesa-payment-gateway-for-woocommerce'),
+                    __('M-Pesa payment received. Transaction ID: %1$s, Phone: %2$s', 'woocommerce-mpesa-payment-gateway'),
                     $transactionId,
                     $phone
                 )
@@ -139,7 +139,7 @@ final class CallbackHandler
             $order->add_order_note(
                 sprintf(
                     /* translators: 1: Expected amount, 2: Received amount, 3: Shortage amount, 4: Transaction ID */
-                    __('Partial M-Pesa payment received. Expected: %1$s, Received: %2$s, Shortage: %3$s. Transaction ID: %4$s', 'mpesa-payment-gateway-for-woocommerce'),
+                    __('Partial M-Pesa payment received. Expected: %1$s, Received: %2$s, Shortage: %3$s. Transaction ID: %4$s', 'woocommerce-mpesa-payment-gateway'),
                     $orderTotal,
                     $amount,
                     $difference,
@@ -152,7 +152,7 @@ final class CallbackHandler
             $order->add_order_note(
                 sprintf(
                     /* translators: 1: Expected amount, 2: Received amount, 3: Excess amount, 4: Transaction ID */
-                    __('M-Pesa payment received with overpayment. Expected: %1$s, Received: %2$s, Excess: %3$s. Transaction ID: %4$s', 'mpesa-payment-gateway-for-woocommerce'),
+                    __('M-Pesa payment received with overpayment. Expected: %1$s, Received: %2$s, Excess: %3$s. Transaction ID: %4$s', 'woocommerce-mpesa-payment-gateway'),
                     $orderTotal,
                     $amount,
                     abs($difference),
@@ -218,7 +218,7 @@ final class CallbackHandler
         $order->add_order_note(
             sprintf(
                 /* translators: 1: Transaction ID, 2: Amount, 3: Phone number */
-                __('M-Pesa payment completed. Transaction ID: %1$s, Amount: %2$s, Phone: %3$s', 'mpesa-payment-gateway-for-woocommerce'),
+                __('M-Pesa payment completed. Transaction ID: %1$s, Amount: %2$s, Phone: %3$s', 'woocommerce-mpesa-payment-gateway'),
                 $transactionId,
                 $amount,
                 $phone
@@ -244,7 +244,7 @@ final class CallbackHandler
         $order->add_order_note(
             sprintf(
                 /* translators: 1: Error code, 2: Error message */
-                __('M-Pesa payment failed. Code: %1$d, Message: %2$s', 'mpesa-payment-gateway-for-woocommerce'),
+                __('M-Pesa payment failed. Code: %1$d, Message: %2$s', 'woocommerce-mpesa-payment-gateway'),
                 $resultCode,
                 $resultDesc
             )

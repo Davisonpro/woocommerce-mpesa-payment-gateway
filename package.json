@@ -1,5 +1,5 @@
 {
-  "name": "mpesa-payment-gateway-for-woocommerce",
+  "name": "woocommerce-mpesa-payment-gateway",
   "version": "2.0.0",
   "description": "M-Pesa payment gateway for WooCommerce",
   "author": "Davison Pro <hello@davisonpro.dev> (https://davisonpro.dev)",

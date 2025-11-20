@@ -108,7 +108,7 @@ final class MpesaApiService
 
         $error = new WP_Error(
             'token_error',
-            __('Failed to retrieve access token', 'mpesa-payment-gateway-for-woocommerce'),
+            __('Failed to retrieve access token', 'woocommerce-mpesa-payment-gateway'),
             $body
         );
         $this->logger->logApiError('oauth', 'Failed to retrieve access token', ['response' => $body]);
@@ -163,7 +163,7 @@ final class MpesaApiService
             'AccountReference' => $reference,
             'TransactionDesc' => $description ?: sprintf(
                 /* translators: %s: Site name */
-                __('Payment for %s', 'mpesa-payment-gateway-for-woocommerce'),
+                __('Payment for %s', 'woocommerce-mpesa-payment-gateway'),
                 get_bloginfo('name')
             ),
         ];
@@ -320,7 +320,7 @@ final class MpesaApiService
             'RecieverIdentifierType' => $this->config['type'],
             'ResultURL' => home_url('/wc-api/mpesa-payment-gateway?action=reversal_result'),
             'QueueTimeOutURL' => home_url('/wc-api/mpesa-payment-gateway?action=reversal_timeout'),
-            'Remarks' => $remarks ?: __('Transaction reversal', 'mpesa-payment-gateway-for-woocommerce'),
+            'Remarks' => $remarks ?: __('Transaction reversal', 'woocommerce-mpesa-payment-gateway'),
             'Occasion' => '',
         ];
 
