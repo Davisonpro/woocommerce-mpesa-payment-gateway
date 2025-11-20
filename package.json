@@ -21,9 +21,9 @@
     "kenya",
     "mobile-payments"
   ],
-  "main": "mpesa-payment-gateway.php",
+  "main": "woocommerce-mpesa-payment-gateway.php",
   "scripts": {
-    "clean": "rm -rf build/ dist/ mpesa-payment-gateway.zip",
+    "clean": "rm -rf build/ dist/ woocommerce-mpesa-payment-gateway.zip",
     "prebuild": "npm run clean && composer install --no-dev --optimize-autoloader --prefer-dist",
     "build": "npm run package",
     "package": "node scripts/package.js",
@@ -43,7 +43,7 @@
     "includes/",
     "languages/",
     "templates/",
-    "mpesa-payment-gateway.php",
+    "woocommerce-mpesa-payment-gateway.php",
     "composer.json",
     "LICENSE",
     "README.md"

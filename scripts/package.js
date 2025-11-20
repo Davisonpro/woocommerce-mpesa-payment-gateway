@@ -25,7 +25,7 @@ const includePatterns = [
     'languages/**/*',
     'templates/**/*',
     'vendor/**/*',
-    'mpesa-payment-gateway.php',
+    'woocommerce-mpesa-payment-gateway.php',
     'uninstall.php',
     'readme.txt',
     'composer.json',

@@ -227,7 +227,7 @@ add_filter('woo_mpesa_api_config', function($config) {
 ### Directory Structure
 
 ```
-mpesa-payment-gateway/
+woocommerce-mpesa-payment-gateway/
 ├── assets/
 │   ├── css/                    # Stylesheets
 │   ├── images/                 # Images and logos
@@ -252,7 +252,7 @@ mpesa-payment-gateway/
 ├── languages/                  # Translation files
 ├── templates/                  # Template files
 ├── composer.json
-└── mpesa-payment-gateway.php              # Main plugin file
+└── woocommerce-mpesa-payment-gateway.php              # Main plugin file
 ```
 
 ### Code Standards

@@ -15,27 +15,27 @@ msgstr ""
 "X-Domain: mpesa-payment-gateway\n"
 
 #. Plugin Name of the plugin
-#: mpesa-payment-gateway.php
+#: woocommerce-mpesa-payment-gateway.php
 msgid "M-Pesa Payment Gateway for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: mpesa-payment-gateway.php
+#: woocommerce-mpesa-payment-gateway.php
 msgid "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway"
 msgstr ""
 
 #. Description of the plugin
-#: mpesa-payment-gateway.php
+#: woocommerce-mpesa-payment-gateway.php
 msgid "Seamless M-Pesa payment gateway integration for WooCommerce. Supports STK Push, C2B, and WooCommerce Blocks checkout."
 msgstr ""
 
 #. Author of the plugin
-#: mpesa-payment-gateway.php
+#: woocommerce-mpesa-payment-gateway.php
 msgid "Davison Pro"
 msgstr ""
 
 #. Author URI of the plugin
-#: mpesa-payment-gateway.php
+#: woocommerce-mpesa-payment-gateway.php
 msgid "https://davisonpro.dev"
 msgstr ""
 
@@ -485,28 +485,28 @@ msgid "Once you complete the payment, this page will update automatically. If yo
 msgstr ""
 
 #. translators: 1: Required PHP version, 2: Current PHP version
-#: mpesa-payment-gateway.php:139
+#: woocommerce-mpesa-payment-gateway.php:139
 msgid "M-Pesa Payment Gateway requires PHP version %1$s or higher. You are running version %2$s."
 msgstr ""
 
 #. translators: 1: Required WordPress version, 2: Current WordPress version
-#: mpesa-payment-gateway.php:156
+#: woocommerce-mpesa-payment-gateway.php:156
 msgid "M-Pesa Payment Gateway requires WordPress version %1$s or higher. You are running version %2$s."
 msgstr ""
 
-#: mpesa-payment-gateway.php:170
+#: woocommerce-mpesa-payment-gateway.php:170
 msgid "M-Pesa Payment Gateway requires WooCommerce to be installed and activated."
 msgstr ""
 
 #. translators: 1: Required WooCommerce version, 2: Current WooCommerce version
-#: mpesa-payment-gateway.php:183
+#: woocommerce-mpesa-payment-gateway.php:183
 msgid "M-Pesa Payment Gateway requires WooCommerce version %1$s or higher. You are running version %2$s."
 msgstr ""
 
-#: mpesa-payment-gateway.php:286
+#: woocommerce-mpesa-payment-gateway.php:286
 msgid "Please install and activate WooCommerce before activating M-Pesa Payment Gateway."
 msgstr ""
 
-#: mpesa-payment-gateway.php:287
+#: woocommerce-mpesa-payment-gateway.php:287
 msgid "Plugin Activation Error"
 msgstr ""

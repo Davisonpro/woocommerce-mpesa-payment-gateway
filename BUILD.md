@@ -42,7 +42,7 @@ The build process creates:
 The zip file contains:
 
 ```
-mpesa-payment-gateway/
+woocommerce-mpesa-payment-gateway/
 ├── assets/
 │   ├── css/
 │   ├── images/
@@ -58,7 +58,7 @@ mpesa-payment-gateway/
 ├── languages/
 ├── templates/
 ├── vendor/ (production only)
-├── mpesa-payment-gateway.php
+├── woocommerce-mpesa-payment-gateway.php
 ├── composer.json
 ├── LICENSE
 ├── README.md
@@ -178,7 +178,7 @@ jobs:
 ## Version Management
 
 Update version in:
-1. `mpesa-payment-gateway.php` (plugin header)
+1. `woocommerce-mpesa-payment-gateway.php` (plugin header)
 2. `package.json` (version field)
 3. `scripts/package.js` (version constant)
 4. `composer.json` (version field)
