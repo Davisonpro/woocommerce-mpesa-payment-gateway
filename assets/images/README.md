@@ -113,5 +113,5 @@ For production improvements:
 Questions about branding? Contact:
 - Safaricom: corporate.communications@safaricom.co.ke
 - Plugin: davis@davisonpro.dev
-- GitHub: https://github.com/Davisonpro/mpesa-payment-gateway/issues
+- GitHub: https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/issues
 

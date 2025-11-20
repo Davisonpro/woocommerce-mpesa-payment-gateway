@@ -78,7 +78,7 @@ final class HookManager
             '<a href="' . esc_url(admin_url('admin.php?page=wc-settings&tab=checkout&section=mpesa')) . '">' .
                 esc_html__('Settings', 'woocommerce-mpesa-payment-gateway') .
             '</a>',
-            '<a href="' . esc_url('https://github.com/Davisonpro/mpesa-payment-gateway') . '" target="_blank">' .
+            '<a href="' . esc_url('https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway') . '" target="_blank">' .
                 esc_html__('Documentation', 'woocommerce-mpesa-payment-gateway') .
             '</a>',
         ];

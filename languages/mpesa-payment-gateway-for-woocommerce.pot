@@ -21,7 +21,7 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #: mpesa-payment-gateway.php
-msgid "https://github.com/Davisonpro/mpesa-payment-gateway"
+msgid "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway"
 msgstr ""
 
 #. Description of the plugin

@@ -6,8 +6,8 @@ Thank you for your interest in contributing to this M-Pesa Payment Gateway! 🎉
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/Davisonpro/mpesa-payment-gateway.git
-   cd mpesa-payment-gateway
+   git clone https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway.git
+   cd woocommerce-mpesa-payment-gateway
    ```
 
 2. **Install dependencies**
@@ -95,7 +95,7 @@ test: add unit tests for API service
 
 1. **Update your fork**
    ```bash
-   git remote add upstream https://github.com/Davisonpro/mpesa-payment-gateway.git
+   git remote add upstream https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway.git
    git fetch upstream
    git merge upstream/main
    ```

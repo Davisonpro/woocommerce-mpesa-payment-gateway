@@ -4,13 +4,13 @@
   "description": "M-Pesa payment gateway for WooCommerce",
   "author": "Davison Pro <hello@davisonpro.dev> (https://davisonpro.dev)",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/Davisonpro/mpesa-payment-gateway",
+  "homepage": "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Davisonpro/mpesa-payment-gateway.git"
+    "url": "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway.git"
   },
   "bugs": {
-    "url": "https://github.com/Davisonpro/mpesa-payment-gateway/issues"
+    "url": "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/issues"
   },
   "keywords": [
     "wordpress",

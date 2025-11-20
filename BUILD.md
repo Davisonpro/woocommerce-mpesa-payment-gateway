@@ -198,5 +198,5 @@ Update version in:
 
 ---
 
-**Questions?** Open an issue at https://github.com/Davisonpro/mpesa-payment-gateway/issues
+**Questions?** Open an issue at https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/issues
 

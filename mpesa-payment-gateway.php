@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: M-Pesa Payment Gateway for WooCommerce
- * Plugin URI: https://github.com/Davisonpro/mpesa-payment-gateway
+ * Plugin URI: https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway
  * Description: Seamless M-Pesa payment gateway integration for WooCommerce. Supports STK Push, C2B, and WooCommerce Blocks checkout.
  * Version: 2.0.0
  * Requires at least: 5.8
@@ -136,7 +136,7 @@ final class Plugin
                     '<div class="notice notice-error"><p>%s</p></div>',
                     sprintf(
                         /* translators: 1: Required PHP version, 2: Current PHP version */
-                        esc_html__('M-Pesa Payment Gateway requires PHP version %1$s or higher. You are running version %2$s.', 'mpesa-payment-gateway-for-woocommerce'),
+                        esc_html__('M-Pesa Payment Gateway requires PHP version %1$s or higher. You are running version %2$s.', ' woocommerce-mpesa-payment-gateway'),
                         esc_html(self::MIN_PHP_VERSION),
                         esc_html(PHP_VERSION)
                     )
@@ -153,7 +153,7 @@ final class Plugin
                     '<div class="notice notice-error"><p>%s</p></div>',
                     sprintf(
                         /* translators: 1: Required WordPress version, 2: Current WordPress version */
-                        esc_html__('M-Pesa Payment Gateway requires WordPress version %1$s or higher. You are running version %2$s.', 'mpesa-payment-gateway-for-woocommerce'),
+                        esc_html__('M-Pesa Payment Gateway requires WordPress version %1$s or higher. You are running version %2$s.', ' woocommerce-mpesa-payment-gateway'),
                         esc_html(self::MIN_WP_VERSION),
                         esc_html($wp_version)
                     )
@@ -167,7 +167,7 @@ final class Plugin
             add_action('admin_notices', function () {
                 printf(
                     '<div class="notice notice-error"><p>%s</p></div>',
-                    esc_html__('M-Pesa Payment Gateway requires WooCommerce to be installed and activated.', 'mpesa-payment-gateway-for-woocommerce')
+                    esc_html__('M-Pesa Payment Gateway requires WooCommerce to be installed and activated.', ' woocommerce-mpesa-payment-gateway')
                 );
             });
             return;
@@ -180,7 +180,7 @@ final class Plugin
                     '<div class="notice notice-error"><p>%s</p></div>',
                     sprintf(
                         /* translators: 1: Required WooCommerce version, 2: Current WooCommerce version */
-                        esc_html__('M-Pesa Payment Gateway requires WooCommerce version %1$s or higher. You are running version %2$s.', 'mpesa-payment-gateway-for-woocommerce'),
+                        esc_html__('M-Pesa Payment Gateway requires WooCommerce version %1$s or higher. You are running version %2$s.', ' woocommerce-mpesa-payment-gateway'),
                         esc_html(self::MIN_WC_VERSION),
                         esc_html(WC_VERSION)
                     )
@@ -273,8 +273,8 @@ final class Plugin
         if (!$this->isWooCommerceActive()) {
             deactivate_plugins(WOO_MPESA_BASENAME);
             wp_die(
-                esc_html__('Please install and activate WooCommerce before activating M-Pesa Payment Gateway.', 'mpesa-payment-gateway-for-woocommerce'),
-                esc_html__('Plugin Activation Error', 'mpesa-payment-gateway-for-woocommerce'),
+                esc_html__('Please install and activate WooCommerce before activating M-Pesa Payment Gateway.', ' woocommerce-mpesa-payment-gateway'),
+                esc_html__('Plugin Activation Error', ' woocommerce-mpesa-payment-gateway'),
                 ['back_link' => true]
             );
         }

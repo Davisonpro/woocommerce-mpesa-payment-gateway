@@ -1,6 +1,6 @@
 # M-Pesa Payment Gateway for WooCommerce
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Davisonpro/mpesa-payment-gateway/releases)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/releases)
 [![WordPress](https://img.shields.io/badge/WordPress-5.8%2B-brightgreen.svg)](https://wordpress.org/)
 [![WooCommerce](https://img.shields.io/badge/WooCommerce-5.3%2B-purple.svg)](https://woocommerce.com/)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4.svg)](https://www.php.net/)
@@ -80,7 +80,7 @@ composer require davisonpro/mpesa-payment-gateway
 
 ### Manual Installation
 
-1. Download the plugin from [GitHub](https://github.com/Davisonpro/mpesa-payment-gateway)
+1. Download the plugin from [GitHub](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway)
 2. Upload to `/wp-content/plugins/mpesa-payment-gateway`
 3. Navigate to the plugin directory:
    ```bash
@@ -269,7 +269,7 @@ mpesa-payment-gateway/
 ### Local Setup
 
 ```bash
-git clone https://github.com/Davisonpro/mpesa-payment-gateway.git
+git clone https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway.git
 cd mpesa-payment-gateway
 composer install
 npm install
@@ -348,9 +348,9 @@ This plugin is open source software licensed under [GPL-3.0-or-later](LICENSE).
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/Davisonpro/mpesa-payment-gateway/issues)
+- **Issues**: [GitHub Issues](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/issues)
 - **Email**: davis@davisonpro.dev
-- **Documentation**: [GitHub Wiki](https://github.com/Davisonpro/mpesa-payment-gateway/wiki)
+- **Documentation**: [GitHub Wiki](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/wiki)
 
 ## Changelog
 

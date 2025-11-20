@@ -61,12 +61,12 @@ Built with modern PHP practices including:
 
 = Documentation =
 
-For detailed documentation, configuration guides, and developer resources, visit the [GitHub repository](https://github.com/Davisonpro/mpesa-payment-gateway).
+For detailed documentation, configuration guides, and developer resources, visit the [GitHub repository](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway).
 
 = Support =
 
-* [GitHub Issues](https://github.com/Davisonpro/mpesa-payment-gateway/issues)
-* [Documentation](https://github.com/Davisonpro/mpesa-payment-gateway/wiki)
+* [GitHub Issues](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/issues)
+* [Documentation](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/wiki)
 * Email: davis@davisonpro.dev
 
 == Installation ==
@@ -225,7 +225,7 @@ add_action('woo_mpesa_payment_complete', function($order, $paymentData) {
 
 = GitHub =
 
-Contribute or report issues: [github.com/Davisonpro/mpesa-payment-gateway](https://github.com/Davisonpro/mpesa-payment-gateway)
+Contribute or report issues: [github.com/Davisonpro/woocommerce-mpesa-payment-gateway](https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway)
 
 == Privacy Policy ==
 

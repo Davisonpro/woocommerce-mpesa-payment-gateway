@@ -4,7 +4,7 @@
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "version": "2.0.0",
-    "homepage": "https://github.com/Davisonpro/mpesa-payment-gateway",
+    "homepage": "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway",
     "authors": [
         {
             "name": "Davison Pro",
@@ -22,8 +22,8 @@
         "kenya"
     ],
     "support": {
-        "issues": "https://github.com/Davisonpro/mpesa-payment-gateway/issues",
-        "source": "https://github.com/Davisonpro/mpesa-payment-gateway"
+        "issues": "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway/issues",
+        "source": "https://github.com/Davisonpro/woocommerce-mpesa-payment-gateway"
     },
     "require": {
         "php": ">=7.4",

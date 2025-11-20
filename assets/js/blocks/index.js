@@ -89,7 +89,7 @@ const PhoneInput = ({ value, onChange, onBlur, hasError }) => {
                     left: 'auto'
                 }
             },
-            settings.phoneLabel || __('M-Pesa Phone Number', 'mpesa-payment-gateway-for-woocommerce')
+            settings.phoneLabel || __('M-Pesa Phone Number', ' woocommerce-mpesa-payment-gateway')
         ),
         createElement(
             'input',
@@ -147,7 +147,7 @@ const ConversionNotice = () => {
                     borderRadius: '4px'
                 }
             },
-            createElement('strong', null, __('Currency Conversion Required', 'mpesa-payment-gateway-for-woocommerce') + ': '),
+            createElement('strong', null, __('Currency Conversion Required', ' woocommerce-mpesa-payment-gateway') + ': '),
             conversionInfo.message
         );
     }
@@ -170,7 +170,7 @@ const ConversionNotice = () => {
     });
 
     const message = sprintf(
-        __('Your order total of %1$s will be charged as KES %2$s (Rate: 1 %3$s = %4$s KES)', 'mpesa-payment-gateway-for-woocommerce'),
+        __('Your order total of %1$s will be charged as KES %2$s (Rate: 1 %3$s = %4$s KES)', ' woocommerce-mpesa-payment-gateway'),
         '<strong>' + formattedOriginalAmount + '</strong>',
         '<strong>' + formattedKesAmount + '</strong>',
         conversionInfo.currency,
@@ -215,14 +215,14 @@ const Content = (props) => {
             if (!phoneNumber) {
                 return {
                     type: emitResponse.responseTypes.ERROR,
-                    message: settings.phoneRequired || __('M-Pesa phone number is required.', 'mpesa-payment-gateway-for-woocommerce'),
+                    message: settings.phoneRequired || __('M-Pesa phone number is required.', ' woocommerce-mpesa-payment-gateway'),
                 };
             }
 
             if (!validatePhoneNumber(phoneNumber)) {
                 return {
                     type: emitResponse.responseTypes.ERROR,
-                    message: settings.phoneInvalid || __('Please enter a valid M-Pesa phone number.', 'mpesa-payment-gateway-for-woocommerce'),
+                    message: settings.phoneInvalid || __('Please enter a valid M-Pesa phone number.', ' woocommerce-mpesa-payment-gateway'),
                 };
             }
 
@@ -295,7 +295,7 @@ const Content = (props) => {
  */
 const Label = (props) => {
     const { PaymentMethodLabel } = props.components;
-    const label = decodeEntities(settings.title) || __('Lipa Na M-Pesa', 'mpesa-payment-gateway-for-woocommerce');
+    const label = decodeEntities(settings.title) || __('Lipa Na M-Pesa', ' woocommerce-mpesa-payment-gateway');
 
     return createElement(
         'span',
@@ -327,7 +327,7 @@ const MpesaPaymentMethod = {
     content: createElement(Content),
     edit: createElement(Content),
     canMakePayment: () => true,
-    ariaLabel: decodeEntities(settings.title) || __('Lipa Na M-Pesa', 'mpesa-payment-gateway-for-woocommerce'),
+    ariaLabel: decodeEntities(settings.title) || __('Lipa Na M-Pesa', ' woocommerce-mpesa-payment-gateway'),
     supports: {
         features: settings.supports || ['products'],
     },
