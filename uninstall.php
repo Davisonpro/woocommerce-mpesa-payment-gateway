@@ -86,7 +86,7 @@ if (class_exists('\Automattic\WooCommerce\Utilities\FeaturesUtil')) {
 
 /*
 if (function_exists('wc_get_log_file_path')) {
-    $log_files = glob(wc_get_log_file_path('mpesa-payment-gateway') . '*');
+    $log_files = glob(wc_get_log_file_path('mpesa-payment-gateway-for-woocommerce') . '*');
     if ($log_files) {
         foreach ($log_files as $log_file) {
             if (file_exists($log_file)) {
